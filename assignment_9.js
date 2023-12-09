@@ -1,4 +1,6 @@
 class Student {
+    studentID;
+    answers = [];
     constructor(studentId) {
       this.studentId = studentId;
       this.answers = [];
@@ -10,6 +12,8 @@ class Student {
   }
   
   class Question {
+    qid;
+    answer;
     constructor(qid, answer) {
       this.qid = qid;
       this.answer = answer;
@@ -21,6 +25,8 @@ class Student {
   }
   
   class Quiz {
+    questions;
+    students;
     constructor(questions, students) {
       this.questions = new Map(questions.map(question => [question.qid, question.answer]));
       this.students = students;
